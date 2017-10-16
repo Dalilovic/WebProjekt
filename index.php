@@ -5,13 +5,70 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-    <head>
-        <meta charset="UTF-8">
+    <head>       
         <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="darson.css">
     </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
+    <body>      
+<nav class="navbar navbar-ineverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Darson</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Početna</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">O nama <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Mediji</a></li>
+      <li><a href="#">Galerija</a></li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registriraj se</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Prijavi se</a></li>
+    </ul>
+  </div>
+</nav>
+        
+            <h2>Striped table</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Darson</td>
+                        <td>22</td>
+                        <td>169</td>
+                    </tr>
+                    <tr>
+                        <td>Beco</td>
+                        <td>22</td>
+                        <td>154</td>
+                    </tr>
+                    <tr>
+                        <td>Bartol</td>
+                        <td>22</td>
+                        <td>160</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+           
+      
     </body>
 </html>
