@@ -15,18 +15,20 @@ include 'head.php';
 	<title>Prijava</title>
 </head>
 <body>
-    <form class="form-horizontal">
+    <form class="form-horizontal" name="prijava" action="index.php" onsubmit="return Validation()" method="post">
          <div class="form-group">
             <label class="control-label col-sm-2"  for="ime">Korisničko ime:</label>
             <div class="col-sm-4">
-                <input type="text" class="form-control" id="korisnickoIme">
+                <input type="text" class="form-control" name="korisnickoIme">
             </div>
+            <div id="ime_error" class="val_error"></div>
         </div>
          <div class="form-group">
-            <label class="control-label col-sm-2"  for="prezime">Lozinka:</label>
+            <label class="control-label col-sm-2"  for="lozinka">Lozinka:</label>
             <div class="col-sm-4">
-                <input type="password" class="form-control" id="lozinka">
+                <input type="password" class="form-control" name="lozinka">
             </div>
+            <div id="lozinka_error" class="val_error"></div>
          </div>
         <div class="form-group"> 
     <div class="col-sm-offset-2 col-sm-10">
@@ -37,10 +39,58 @@ include 'head.php';
   </div>
   <div class="form-group"> 
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Spremi</button>
+        <input type="submit" class="btn btn-default" name="prijava" value="Prijavi se">
     </div>
   </div>
     </form>
     
 </body>
 </html>
+
+<script type="text/javascript">
+    
+    var korisnik=document.forms["prijava"]["korisnickoIme"];
+    var lozinka=document.forms["prijava"]["lozinka"];
+
+    var korisnik_greska=document.getElementById("ime_error");
+    var lozinka_greska=document.getElementById("lozinka_error");
+    
+    korisnik.addEventListener("blur", imeValidate, true);
+    lozinka.addEventListener("blur", lozinkaValidate, true);
+
+
+function Validation(){
+    
+    if(korisnik.value==""){
+       korisnik.style.border="1px solid red";
+       korisnik_greska.textContent="Korisnicko ime je obvezno";
+       korisnik.focus();
+       return false;
+   }
+   if(lozinka.value==""){
+       lozinka.style.border="1px solid red";
+       lozinka_greska.textContent="Lozinka je obvezno";
+       lozinka.focus();
+       return false;
+   }  
+}
+
+function imeValidate(){
+    
+    if(korisnik.value!=""){
+        korisnik.style.border="1px solid #5E6E66";
+        korisnik_greska.innerHTML ="";
+        return true;        
+    } 
+}
+function lozinkaValidate(){
+    if(lozinka.value!=""){
+        lozinka.style.border="1px solid #5E6E66";
+        lozinka_greska.innerHTML ="";
+        return true;        
+    }  
+}
+
+
+
+</script>
