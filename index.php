@@ -1,3 +1,19 @@
+<?php
+
+
+if(isset($_POST["register"])){
+    $user=$_POST["korisnickoIme"];
+    echo 'Dobrodošao '.$user;
+}
+if(isset($_POST["prijava"])){
+    $user=$_POST["korisnickoIme"];
+    echo 'Dobrodošao '.$user;
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -21,7 +37,7 @@ and open the template in the editor.
       <a class="navbar-brand" href="#">Darson</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Početna</a></li>
+      <li class="active"><a href="#index.php">Početna</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">O nama <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#">Page 1-1</a></li>
@@ -34,8 +50,8 @@ and open the template in the editor.
       <li><a href="#">Kontakt</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registriraj se</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Prijavi se</a></li>
+      <li><a href="registracija.php"><span class="glyphicon glyphicon-user"></span> Registriraj se</a></li>
+      <li><a href="prijava.php"><span class="glyphicon glyphicon-log-in"></span> Prijavi se</a></li>
     </ul>
   </div>
 </nav>
